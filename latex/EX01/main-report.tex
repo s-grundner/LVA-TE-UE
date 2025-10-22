@@ -49,6 +49,7 @@
 
 \newcommand{\designspath}{../../designs}
 \graphicspath{{images/}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -114,13 +115,7 @@ Bei der PMOST/R Verstärkerschaltung wird der Arbeitspunktes bei maximaler Spann
 \[ A_0 = \frac{U_\mathrm{out}}{U_\mathrm{in}} \]
 mittels DC sweep von \lstinline|VIN| ermittelt.
 
-\lstinputlisting[firstline=75, lastline=79]{\designspath/a1_k12136610.sch}
-
-Nun werden die Spannungen bei der Maximalverstärkung gesucht und die Spannungsquellen im SKY Modell (\autoref{fig:xschem}) auf diesen Arbeitspunkt eingestellt.
-
-\lstinputlisting[firstline=80, lastline=81]{\designspath/a1_k12136610.sch}
-
-\subsubsection{Ergebnisse}
+\lstinputlisting[firstline=75, lastline=78]{\designspath/a1_k12136610.sch}
 
 In \autoref{fig:Uout-vs-Uin} ist das Inverter Verhalten der Schaltung zu erkennen und in \autoref{fig:A0-vs-Uin} der Verlauf der Spannungsverstärkung.
 
@@ -137,13 +132,19 @@ In \autoref{fig:Uout-vs-Uin} ist das Inverter Verhalten der Schaltung zu erkenne
     \end{minipage}
 \end{figure}
 
+Nun werden die Spannungen bei der Maximalverstärkung gesucht, diese Spannungen definieren den Arbeitspunkt.
+
+\lstinputlisting[firstline=79, lastline=81]{\designspath/a1_k12136610.sch}
+
 Die Werte im Arbeitspunkt sind:
 
-\begin{itemize}
-    \item $A_{0, \max} = 3.07$
-    \item $U_\mathrm{GD, op} = \SI{-0.782}{\volt}$ (Eingangsspannung)
-    \item $U_\mathrm{DS, op} = \SI{-1.05}{\volt}$ (Biasspannung)
-\end{itemize}
+\begin{table}[h]
+    \caption{Arbeitspunkt}
+    \begin{tabularx}{\textwidth}{XXX}
+    $A_{0, \max}$ & $U_\mathrm{GD, op}$ (Eingangsspannung) & $U_\mathrm{DS, op}$ (Biasspannung) \\ \midrule
+    $3.07$ & $\SI{-0.782}{\volt}$ & $\SI{-1.05}{\volt}$ 
+    \end{tabularx}
+\end{table}
 
 \begin{figure}[h]
     \begin{minipage}[t]{0.49\textwidth}

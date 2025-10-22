@@ -6,7 +6,7 @@ set scrolloff=5
 set number
 set tabstop=2 shiftwidth=2 expandtab
 
-set guifont=Monospace:h18
+set guifont=Monospace\ Regular\ 16
 set background=dark
 colorscheme desert
 

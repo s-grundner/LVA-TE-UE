@@ -7,22 +7,22 @@ F {}
 E {}
 T {SKY Modell} 480 -390 0 0 0.4 0.4 {}
 T {PMOST/R Verstaerker} 110 -390 0 0 0.4 0.4 {}
-N 120 -200 140 -200 {lab=#net1}
+N 120 -200 140 -200 {lab=in}
 N 180 -250 180 -230 {lab=GND}
-N 440 -200 460 -200 {lab=#net2}
+N 440 -200 460 -200 {lab=#net1}
 N 180 -250 260 -250 {lab=GND}
 N 720 -160 720 -140 {lab=GND}
-N 720 -240 720 -220 {lab=#net3}
-N 120 -230 120 -200 {lab=#net1}
+N 720 -240 720 -220 {lab=#net2}
+N 120 -230 120 -200 {lab=in}
 N 120 -320 120 -290 {lab=GND}
 N 180 -320 180 -250 {lab=GND}
 N 320 -320 320 -290 {lab=GND}
 N 180 -160 200 -160 {lab=out}
-N 180 -80 180 -60 {lab=#net4}
-N 180 -60 320 -60 {lab=#net4}
-N 320 -80 320 -60 {lab=#net4}
-N 320 -230 320 -140 {lab=#net5}
-N 440 -230 440 -200 {lab=#net2}
+N 180 -80 180 -60 {lab=#net3}
+N 180 -60 320 -60 {lab=#net3}
+N 320 -80 320 -60 {lab=#net3}
+N 320 -230 320 -140 {lab=#net4}
+N 440 -230 440 -200 {lab=#net1}
 N 440 -300 440 -290 {lab=GND}
 N 440 -320 440 -300 {lab=GND}
 N 500 -320 500 -230 {lab=GND}
@@ -31,10 +31,10 @@ N 500 -250 580 -250 {lab=GND}
 N 640 -320 640 -300 {lab=GND}
 N 500 -200 580 -200 {lab=GND}
 N 580 -210 580 -200 {lab=GND}
-N 640 -240 640 -220 {lab=#net6}
-N 500 -170 500 -60 {lab=#net7}
-N 640 -160 640 -60 {lab=#net7}
-N 500 -60 640 -60 {lab=#net7}
+N 640 -240 640 -220 {lab=#net5}
+N 500 -170 500 -60 {lab=#net6}
+N 640 -160 640 -60 {lab=#net6}
+N 500 -60 640 -60 {lab=#net6}
 N 180 -170 180 -140 {lab=out}
 N 180 -200 260 -200 {lab=GND}
 N 260 -250 260 -200 {lab=GND}
@@ -54,7 +54,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {lab_wire.sym} 120 -200 0 0 {name=p1 sig_type=std_logic lab=in}
-C {vsource.sym} 120 -260 2 0 {name=VIN value=-1.8 savecurrent=false}
+C {vsource.sym} 120 -260 2 0 {name=VIN value="pulse(0 -1.8 1n) ac -1.8" savecurrent=false
+}
 C {vsource.sym} 320 -260 2 0 {name=VDD value=-1.8 savecurrent=false}
 C {res.sym} 180 -110 0 0 {name=RL
 value=50k
@@ -62,7 +63,7 @@ footprint=1206
 device=resistor
 m=1}
 C {gnd.sym} 120 -320 2 0 {name=l3 lab=GND}
-C {code.sym} 790 -280 0 0 {name=spice_dc only_toplevel=false value="
+C {code.sym} 790 -360 0 0 {name=spice_dc only_toplevel=false value="
 .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
 .control
@@ -72,31 +73,55 @@ set xfont_size=20
 
 alter @RL[resistance]=50k
 
+*******************
+*** DC Analysis ***
+*******************
+
 dc VIN 0 -1.8 -1m
 let A0=deriv(-out)
+** plot out
+** plot A0
+
+***********************
+*** Operating Point ***
+***********************
+
+** meas DC A0max max A0
+** meas DC vgs_op max_at A0
+** meas DC vds_op find out at=vgs_op
+** 
+** alter @VGS[dc]=vgs_op
+** alter @VDS[dc]=vds_op
+** 
+** dc VDS 0 -1.8 -1m
+** let func_gds=deriv(I(VIDg))
+** plot func_gds
+** meas DC gds find func_gds at=@VDS[dc]
+** alter @Rgds[resistance]=1/gds
+** 
+** dc VGS 0 -1.8 -1m
+** let func_gm=deriv(I(VIDg))
+** plot func_gm
+** meas DC gm find func_gm at=@VGS[dc]
+** alter @Rgm[resistance]=1/gm
+** 
+** let A0_calc=1/(@Rgm[resistance]*(1/@Rgds[resistance]+1/@RL[resistance]))
+** print A0_calc
+
+**************************
+*** Transient Analysis ***
+**************************
+
+tran 25p 3n
+plot in out
+
+**************************
+*** AC Analysis ***
+**************************
+
+alter @VIN[ac]=-0.78
+ac dec 100 1 100Meg
 plot out
-plot A0
-meas DC A0max max A0
-meas DC vgs_op max_at A0
-meas DC vds_op find out at=vgs_op
-
-alter @VGS[dc]=vgs_op
-alter @VDS[dc]=vds_op
-
-dc VDS 0 -1.8 -1m
-let func_gds=deriv(I(VIDg))
-plot func_gds
-meas DC gds find func_gds at=@VDS[dc]
-alter @Rgds[resistance]=1/gds
-
-dc VGS 0 -1.8 -1m
-let func_gm=deriv(I(VIDg))
-plot func_gm
-meas DC gm find func_gm at=@VGS[dc]
-alter @Rgm[resistance]=1/gm
-
-let A0_calc=1/(@Rgm[resistance]*(1/@Rgds[resistance]+1/@RL[resistance]))
-print A0_calc
 
 .endc
 .save all
