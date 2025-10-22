@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1" height="1" version="1.1">
+<style type="text/css">
+.l0{
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l1{
+  fill: #0099cc;
+  stroke: #0099cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l2{
+  fill: #aaaaaa; fill-opacity: 0.2;
+  stroke: #aaaaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l3{
+  fill: #222222; fill-opacity: 0.5;
+  stroke: #222222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l4{
+  fill: #229900;
+  stroke: #229900;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l5{
+  fill: #bb2200;
+  stroke: #bb2200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l6{
+  fill: #0066cc; fill-opacity: 0.5;
+  stroke: #0066cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l7{
+  fill: #ff0000; fill-opacity: 0.5;
+  stroke: #ff0000;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l8{
+  fill: #888800; fill-opacity: 0.5;
+  stroke: #888800;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l9{
+  fill: #00aaaa; fill-opacity: 0.5;
+  stroke: #00aaaa;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l10{
+  fill: #880088;
+  stroke: #880088;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l11{
+  fill: #00ff00; fill-opacity: 0.5;
+  stroke: #00ff00;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l12{
+  fill: #0000cc; fill-opacity: 0.5;
+  stroke: #0000cc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l13{
+  fill: #666600; fill-opacity: 0.5;
+  stroke: #666600;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l14{
+  fill: #557755; fill-opacity: 0.2;
+  stroke: #557755;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l15{
+  fill: #aa2222; fill-opacity: 0.5;
+  stroke: #aa2222;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l16{
+  fill: #7ccc40; fill-opacity: 0.5;
+  stroke: #7ccc40;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l17{
+  fill: #00ffcc; fill-opacity: 0.2;
+  stroke: #00ffcc;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l18{
+  fill: #ce0097; fill-opacity: 0.5;
+  stroke: #ce0097;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l19{
+  fill: #d2d46b; fill-opacity: 0.2;
+  stroke: #d2d46b;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l20{
+  fill: #ef6158; fill-opacity: 0.2;
+  stroke: #ef6158;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+.l21{
+  fill: #fdb200; fill-opacity: 0.2;
+  stroke: #fdb200;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width: 0.24;
+}
+text {font-family: Sans-Serif;}
+</style>
+<rect class="l0" x="0" y="0" width="1" height="1"/>
+<path class="l4" style="fill:none;" d="M0.0841169 0.488953L0.137284 0.488953L0.137284 0.56575L0.0841169 0.56575L0.0841169 0.488953z"/>
+<path class="l4" style="fill:none;" d="M0.0619641 0.525875L0.0649178 0.525875L0.0649178 0.528828L0.0619641 0.528828L0.0619641 0.525875z"/>
+<path class="l4" style="fill:none;" d="M0.0457186 0.418064L0.0811632 0.418064L0.0811632 0.494861L0.0457186 0.494861L0.0457186 0.418064z"/>
+<path class="l4" style="fill:none;" d="M0.282016 0.418064L0.31746 0.418064L0.31746 0.494861L0.282016 0.494861L0.282016 0.418064z"/>
+<path class="l4" style="fill:none;" d="M0.125469 0.595287L0.143191 0.595287L0.143191 0.672083L0.125469 0.672083L0.125469 0.595287z"/>
+<path class="l4" style="fill:none;" d="M0.0575335 0.364897L0.0693484 0.364897L0.0693484 0.388527L0.0575335 0.388527L0.0575335 0.364897z"/>
+<path class="l4" style="fill:none;" d="M0.866851 0.432833L0.985 0.432833L0.985 0.562796L0.866851 0.562796L0.866851 0.432833z"/>
+<path class="l4" style="fill:none;" d="M0.156483 0.568703L0.178636 0.568703L0.178636 0.580518L0.156483 0.580518L0.156483 0.568703z"/>
+<path class="l4" style="fill:none;" d="M0.462192 0.488953L0.515359 0.488953L0.515359 0.56575L0.462192 0.56575L0.462192 0.488953z"/>
+<path class="l4" style="fill:none;" d="M0.423794 0.418064L0.459239 0.418064L0.459239 0.494861L0.423794 0.494861L0.423794 0.418064z"/>
+<path class="l4" style="fill:none;" d="M0.128423 0.364897L0.140238 0.364897L0.140238 0.388527L0.128423 0.388527L0.128423 0.364897z"/>
+<path class="l4" style="fill:none;" d="M0.660091 0.406249L0.695536 0.406249L0.695536 0.483046L0.660091 0.483046L0.660091 0.406249z"/>
+<path class="l4" style="fill:none;" d="M0.763471 0.406249L0.781194 0.406249L0.781194 0.483046L0.763471 0.483046L0.763471 0.406249z"/>
+<path class="l4" style="fill:none;" d="M0.763471 0.500768L0.781194 0.500768L0.781194 0.577565L0.763471 0.577565L0.763471 0.500768z"/>
+<path class="l4" style="fill:none;" d="M0.766425 0.595287L0.77824 0.595287L0.77824 0.618917L0.766425 0.618917L0.766425 0.595287z"/>
+<path class="l4" style="fill:none;" d="M0.668952 0.500768L0.686675 0.500768L0.686675 0.577565L0.668952 0.577565L0.668952 0.500768z"/>
+<path class="l4" style="fill:none;" d="M0.290877 0.595287L0.308599 0.595287L0.308599 0.672083L0.290877 0.672083L0.290877 0.595287z"/>
+<path class="l4" style="fill:none;" d="M0.293831 0.364897L0.305646 0.364897L0.305646 0.388527L0.293831 0.388527L0.293831 0.364897z"/>
+<path class="l4" style="fill:none;" d="M0.435609 0.364897L0.447424 0.364897L0.447424 0.388527L0.435609 0.388527L0.435609 0.364897z"/>
+<path class="l4" style="fill:none;" d="M0.506498 0.364897L0.518313 0.364897L0.518313 0.388527L0.506498 0.388527L0.506498 0.364897z"/>
+<path class="l4" style="fill:none;" d="M0.671906 0.364897L0.683721 0.364897L0.683721 0.388527L0.671906 0.388527L0.671906 0.364897z"/>
+<path class="l4" style="fill:none;" d="M0.766425 0.364897L0.77824 0.364897L0.77824 0.388527L0.766425 0.388527L0.766425 0.364897z"/>
+<path class="l1" d="M0.0634409 0.527351L0.0870706 0.527351"/>
+<path class="l1" d="M0.13433 0.468277L0.13433 0.491907"/>
+<path class="l1" d="M0.441516 0.527351L0.465146 0.527351"/>
+<path class="l1" d="M0.13433 0.468277L0.228849 0.468277"/>
+<path class="l1" d="M0.772333 0.574611L0.772333 0.598241"/>
+<path class="l1" d="M0.772333 0.480092L0.772333 0.503722"/>
+<path class="l1" d="M0.0634409 0.491907L0.0634409 0.527351"/>
+<path class="l1" d="M0.0634409 0.385573L0.0634409 0.421018"/>
+<path class="l1" d="M0.13433 0.385573L0.13433 0.468277"/>
+<path class="l1" d="M0.299738 0.385573L0.299738 0.421018"/>
+<path class="l1" d="M0.13433 0.574611L0.15796 0.574611"/>
+<path class="l1" d="M0.13433 0.66913L0.13433 0.692759"/>
+<path class="l1" d="M0.13433 0.692759L0.299738 0.692759"/>
+<path class="l1" d="M0.299738 0.66913L0.299738 0.692759"/>
+<path class="l1" d="M0.299738 0.491907L0.299738 0.598241"/>
+<path class="l1" d="M0.441516 0.491907L0.441516 0.527351"/>
+<path class="l1" d="M0.441516 0.409203L0.441516 0.421018"/>
+<path class="l1" d="M0.441516 0.385573L0.441516 0.409203"/>
+<path class="l1" d="M0.512406 0.385573L0.512406 0.491907"/>
+<path class="l1" d="M0.606924 0.468277L0.606924 0.515537"/>
+<path class="l1" d="M0.512406 0.468277L0.606924 0.468277"/>
+<path class="l1" d="M0.677814 0.385573L0.677814 0.409203"/>
+<path class="l1" d="M0.512406 0.527351L0.606924 0.527351"/>
+<path class="l1" d="M0.606924 0.515537L0.606924 0.527351"/>
+<path class="l1" d="M0.677814 0.480092L0.677814 0.503722"/>
+<path class="l1" d="M0.512406 0.562796L0.512406 0.692759"/>
+<path class="l1" d="M0.677814 0.574611L0.677814 0.692759"/>
+<path class="l1" d="M0.512406 0.692759L0.677814 0.692759"/>
+<path class="l1" d="M0.13433 0.562796L0.13433 0.598241"/>
+<path class="l1" d="M0.13433 0.527351L0.228849 0.527351"/>
+<path class="l1" d="M0.228849 0.468277L0.228849 0.527351"/>
+<path class="l1" d="M0.772333 0.385573L0.772333 0.409203"/>
+<text fill="#222222"  xml:space="preserve" font-size="0.0245749" transform="translate(0.488776, 0.325183)" >SKY Modell</text>
+<text fill="#222222"  xml:space="preserve" font-size="0.0245749" transform="translate(0.0516261, 0.325183)" >PMOST/R Verstaerker</text>
+</svg>

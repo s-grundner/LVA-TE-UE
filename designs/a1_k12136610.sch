@@ -5,41 +5,41 @@ V {}
 S {}
 F {}
 E {}
-T {SKY Modell} 370 -360 0 0 0.4 0.4 {}
-T {PMOST/R Verstaerker} 50 -360 0 0 0.4 0.4 {}
-N 140 -70 140 -60 {lab=GND}
-N 80 -250 80 -200 {lab=in}
-N 80 -250 100 -250 {lab=in}
-N 80 -140 80 -60 {lab=GND}
-N 140 -210 150 -210 {lab=out}
-N 140 -220 140 -200 {lab=out}
-N 140 -140 140 -130 {lab=#net1}
-N 220 -140 220 -60 {lab=GND}
-N 140 -290 140 -280 {lab=#net2}
-N 320 -210 320 -200 {lab=#net3}
-N 320 -210 380 -210 {lab=#net3}
-N 320 -140 320 -60 {lab=GND}
-N 420 -180 420 -60 {lab=GND}
-N 510 -140 510 -60 {lab=GND}
-N 420 -210 440 -210 {lab=#net4}
-N 140 -250 220 -250 {lab=#net2}
-N 220 -250 220 -200 {lab=#net2}
-N 220 -290 220 -250 {lab=#net2}
-N 140 -290 220 -290 {lab=#net2}
-N 620 -210 620 -200 {lab=GND}
-N 570 -210 620 -210 {lab=GND}
-N 570 -210 570 -200 {lab=GND}
-N 620 -70 620 -60 {lab=GND}
-N 620 -140 620 -130 {lab=#net5}
-N 440 -210 510 -210 {lab=#net4}
-N 510 -210 510 -200 {lab=#net4}
-N 420 -270 420 -240 {lab=#net6}
-N 510 -270 510 -210 {lab=#net4}
-N 420 -290 430 -290 {lab=#net6}
-N 420 -290 420 -270 {lab=#net6}
-N 490 -290 510 -290 {lab=#net4}
-N 510 -290 510 -270 {lab=#net4}
-C {sky130_fd_pr/pfet_01v8.sym} 120 -250 0 0 {name=M1
+T {SKY Modell} 480 -390 0 0 0.4 0.4 {}
+T {PMOST/R Verstaerker} 110 -390 0 0 0.4 0.4 {}
+N 120 -200 140 -200 {lab=#net1}
+N 180 -250 180 -230 {lab=GND}
+N 440 -200 460 -200 {lab=#net2}
+N 180 -250 260 -250 {lab=GND}
+N 720 -160 720 -140 {lab=GND}
+N 720 -240 720 -220 {lab=#net3}
+N 120 -230 120 -200 {lab=#net1}
+N 120 -320 120 -290 {lab=GND}
+N 180 -320 180 -250 {lab=GND}
+N 320 -320 320 -290 {lab=GND}
+N 180 -160 200 -160 {lab=out}
+N 180 -80 180 -60 {lab=#net4}
+N 180 -60 320 -60 {lab=#net4}
+N 320 -80 320 -60 {lab=#net4}
+N 320 -230 320 -140 {lab=#net5}
+N 440 -230 440 -200 {lab=#net2}
+N 440 -300 440 -290 {lab=GND}
+N 440 -320 440 -300 {lab=GND}
+N 500 -320 500 -230 {lab=GND}
+N 580 -250 580 -210 {lab=GND}
+N 500 -250 580 -250 {lab=GND}
+N 640 -320 640 -300 {lab=GND}
+N 500 -200 580 -200 {lab=GND}
+N 580 -210 580 -200 {lab=GND}
+N 640 -240 640 -220 {lab=#net6}
+N 500 -170 500 -60 {lab=#net7}
+N 640 -160 640 -60 {lab=#net7}
+N 500 -60 640 -60 {lab=#net7}
+N 180 -170 180 -140 {lab=out}
+N 180 -200 260 -200 {lab=GND}
+N 260 -250 260 -200 {lab=GND}
+N 720 -320 720 -300 {lab=GND}
+C {sky130_fd_pr/pfet_01v8.sym} 160 -200 0 0 {name=M1
 W=1
 L=0.15
 nf=1
@@ -53,18 +53,16 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {lab_wire.sym} 80 -250 0 0 {name=p1 sig_type=std_logic lab=in}
-C {gnd.sym} 140 -60 0 0 {name=l1 lab=GND}
-C {vsource.sym} 80 -170 0 0 {name=VIN value=1.8 savecurrent=false}
-C {vsource.sym} 220 -170 0 0 {name=VDD value=1.8 savecurrent=false}
-C {res.sym} 140 -100 0 0 {name=RL
+C {lab_wire.sym} 120 -200 0 0 {name=p1 sig_type=std_logic lab=in}
+C {vsource.sym} 120 -260 2 0 {name=VIN value=-1.8 savecurrent=false}
+C {vsource.sym} 320 -260 2 0 {name=VDD value=-1.8 savecurrent=false}
+C {res.sym} 180 -110 0 0 {name=RL
 value=50k
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 80 -60 0 0 {name=l3 lab=GND}
-C {gnd.sym} 220 -60 0 0 {name=l4 lab=GND}
-C {code.sym} 680 -170 0 0 {name=spice_dc only_toplevel=false value="
+C {gnd.sym} 120 -320 2 0 {name=l3 lab=GND}
+C {code.sym} 790 -280 0 0 {name=spice_dc only_toplevel=false value="
 .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
 .control
@@ -74,27 +72,27 @@ set xfont_size=20
 
 alter @RL[resistance]=50k
 
-dc VIN 0 1.8 1m
+dc VIN 0 -1.8 -1m
 let A0=deriv(-out)
 plot out
 plot A0
 meas DC A0max max A0
-meas DC vgd_op max_at A0
-meas DC vds_op find out at=vgd_op
+meas DC vgs_op max_at A0
+meas DC vds_op find out at=vgs_op
 
-alter @VGD[dc]=vgd_op
+alter @VGS[dc]=vgs_op
 alter @VDS[dc]=vds_op
 
-dc VDS 0 1.8 1m
+dc VDS 0 -1.8 -1m
 let func_gds=deriv(I(VIDg))
 plot func_gds
 meas DC gds find func_gds at=@VDS[dc]
 alter @Rgds[resistance]=1/gds
 
-dc VGD 0 1.8 1m
+dc VGS 0 -1.8 -1m
 let func_gm=deriv(I(VIDg))
 plot func_gm
-meas DC gm find func_gm at=@VGD[dc]
+meas DC gm find func_gm at=@VGS[dc]
 alter @Rgm[resistance]=1/gm
 
 let A0_calc=1/(@Rgm[resistance]*(1/@Rgds[resistance]+1/@RL[resistance]))
@@ -103,8 +101,8 @@ print A0_calc
 .endc
 .save all
 "}
-C {opin.sym} 150 -210 0 0 {name=p2 lab=out}
-C {sky130_fd_pr/pfet_01v8.sym} 400 -210 0 0 {name=M2
+C {opin.sym} 200 -160 0 0 {name=p2 lab=out}
+C {sky130_fd_pr/pfet_01v8.sym} 480 -200 0 0 {name=M2
 W=1
 L=0.15
 nf=1
@@ -118,22 +116,24 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {vsource.sym} 320 -170 0 0 {name=VGD value=0 savecurrent=false}
-C {gnd.sym} 320 -60 0 0 {name=l2 lab=GND}
-C {gnd.sym} 510 -60 0 0 {name=l5 lab=GND}
-C {gnd.sym} 420 -60 0 0 {name=l6 lab=GND}
-C {vsource.sym} 510 -170 0 0 {name=VDS value=0 savecurrent=false}
-C {res.sym} 620 -170 0 0 {name=Rgds
+C {vsource.sym} 440 -260 2 0 {name=VGS value=0 savecurrent=false}
+C {gnd.sym} 180 -320 2 0 {name=l2 lab=GND}
+C {vsource.sym} 640 -270 2 0 {name=VDS value=0 savecurrent=false}
+C {res.sym} 720 -270 0 0 {name=Rgds
 value=1k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 620 -100 0 0 {name=Rgm
+C {res.sym} 720 -190 0 0 {name=Rgm
 value=1k
 footprint=1206
 device=resistor
 m=1}
-C {gnd.sym} 620 -60 0 0 {name=l7 lab=GND}
-C {gnd.sym} 570 -200 0 0 {name=l8 lab=GND}
-C {ammeter.sym} 460 -290 1 0 {name=VIDg savecurrent=true spice_ignore=0}
-C {ammeter.sym} 140 -170 0 0 {name=VID savecurrent=true spice_ignore=0}
+C {gnd.sym} 720 -140 0 0 {name=l7 lab=GND}
+C {ammeter.sym} 640 -190 0 0 {name=VIDg savecurrent=true spice_ignore=0}
+C {ammeter.sym} 320 -110 0 0 {name=VID savecurrent=true spice_ignore=0}
+C {gnd.sym} 320 -320 2 0 {name=l1 lab=GND}
+C {gnd.sym} 440 -320 2 0 {name=l4 lab=GND}
+C {gnd.sym} 500 -320 2 0 {name=l9 lab=GND}
+C {gnd.sym} 640 -320 2 0 {name=l10 lab=GND}
+C {gnd.sym} 720 -320 2 0 {name=l5 lab=GND}

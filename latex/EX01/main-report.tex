@@ -40,18 +40,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 
-%% This is the place where you can load additional packages. If you want to load
-%% a package `biblatex', you would use the command `\usepackage{biblatex}'.
-%% 
 \usepackage{enumerate}
 \usepackage{listingsutf8}
 \usepackage{graphicx}
 \usepackage{siunitx}
-
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\designs}{../../designs}
+\newcommand{\designspath}{../../designs}
 \graphicspath{{images/}}
 
 \begin{document}
@@ -107,7 +103,7 @@ Links ist die PMOS-Transistor / Widerstand Verstärkerschaltung zu sehen. Als La
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{plot-0.png}
+    \includegraphics[width=0.8\textwidth]{schem.png}
     \caption{xschem Schaltung}\label{fig:xschem}
 \end{figure}
 
@@ -118,11 +114,11 @@ Bei der PMOST/R Verstärkerschaltung wird der Arbeitspunktes bei maximaler Spann
 \[ A_0 = \frac{U_\mathrm{out}}{U_\mathrm{in}} \]
 mittels DC sweep von \lstinline|VIN| ermittelt.
 
-\lstinputlisting[firstline=77, lastline=81]{\designs/a1_k12136610.sch}
+\lstinputlisting[firstline=75, lastline=79]{\designspath/a1_k12136610.sch}
 
 Nun werden die Spannungen bei der Maximalverstärkung gesucht und die Spannungsquellen im SKY Modell (\autoref{fig:xschem}) auf diesen Arbeitspunkt eingestellt.
 
-\lstinputlisting[firstline=82, lastline=83]{\designs/a1_k12136610.sch}
+\lstinputlisting[firstline=80, lastline=81]{\designspath/a1_k12136610.sch}
 
 \subsubsection{Ergebnisse}
 
@@ -131,12 +127,12 @@ In \autoref{fig:Uout-vs-Uin} ist das Inverter Verhalten der Schaltung zu erkenne
 \begin{figure}[h]
     \begin{minipage}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{plot-2.png}
+        \includegraphics[width=\textwidth]{out.png}
         \caption{Ausgangsspannung $U_\mathrm{out}$ vs $U_\mathrm{in}$}\label{fig:Uout-vs-Uin}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{plot-1.png}
+        \includegraphics[width=\textwidth]{a0.png}
         \caption{Spannungsverstärkung $A_0$ vs $U_\mathrm{in}$}\label{fig:A0-vs-Uin}
     \end{minipage}
 \end{figure}
@@ -145,9 +141,22 @@ Die Werte im Arbeitspunkt sind:
 
 \begin{itemize}
     \item $A_{0, \max} = 3.07$
-    \item $U_\mathrm{GD, op} = \SI{0.782}{\volt}$ (Eingangsspannung)
-    \item $U_\mathrm{DS, op} = \SI{1.05}{\volt}$ (Biasspannung)
+    \item $U_\mathrm{GD, op} = \SI{-0.782}{\volt}$ (Eingangsspannung)
+    \item $U_\mathrm{DS, op} = \SI{-1.05}{\volt}$ (Biasspannung)
 \end{itemize}
+
+\begin{figure}[h]
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gm.png}
+        \caption{gm}\label{fig:gm-vs-Uin}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{gds.png}
+        \caption{gds}\label{fig:gds-vs-Uin}
+    \end{minipage}
+\end{figure}
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
