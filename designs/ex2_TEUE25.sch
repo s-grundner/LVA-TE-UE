@@ -415,7 +415,6 @@ C {lab_wire.sym} 490 -1560 0 0 {name=p7 sig_type=std_logic lab=OUTA
 C {lab_wire.sym} 490 -1480 0 0 {name=p8 sig_type=std_logic lab=OUTB
 }
 C {lab_wire.sym} 730 -1660 0 0 {name=p9 sig_type=std_logic lab=BIAS}
-C {lab_wire.sym} 420 -1250 0 0 {name=p10 sig_type=std_logic lab=BIAS}
 C {lab_wire.sym} 410 -1310 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 820 -1720 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {gnd.sym} 790 -1370 0 0 {name=l1 lab=GND}

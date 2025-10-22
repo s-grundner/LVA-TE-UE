@@ -9,7 +9,7 @@
 #### Normally there is no reason to set this variable if using standard
 #### installation. Location of files is set at compile time but may be overridden
 #### with following line:
-# set XSCHEM_SHAREDIR $env(HOME)/share/xschem
+#set XSCHEM_SHAREDIR $env(HOME)/share/xschem
 
 ###########################################################################
 #### XSCHEM SYSTEM-WIDE DESIGN LIBRARY PATHS: XSCHEM_LIBRARY_PATH
@@ -27,9 +27,11 @@
 
 #### Flush any previous definition
 set XSCHEM_LIBRARY_PATH {}
+set PDKPATH /foss/pdks/sky130A
 #### include standard xschem devices library
 append XSCHEM_LIBRARY_PATH :${XSCHEM_SHAREDIR}/xschem_library/devices
 append XSCHEM_LIBRARY_PATH :${XSCHEM_SHAREDIR}/xschem_library
+append XSCHEM_LIBRARY_PATH :${PDKPATH}/libs.tech/xschem
 ## include directory where this xschemrc file is located
 append XSCHEM_LIBRARY_PATH :[file dirname [file normalize [info script]]]
 #### add ~/.xschem/xschem_library (USER_CONF_DIR is normally ~/.xschem)
@@ -54,7 +56,7 @@ set dircolor(devices$) red
 #### Start without a design if no filename given on command line:
 #### To avoid absolute paths, use a path that is relative to one of the
 #### XSCHEM_LIBRARY_PATH directories. Default: empty
-set XSCHEM_START_WINDOW {sky130_tests/top.sch}
+#set XSCHEM_START_WINDOW {sky130_tests/top.sch}
 
 ###########################################################################
 #### DIRECTORY WHERE SIMULATIONS, NETLIST AND SIMULATOR OUTPUTS ARE PLACED

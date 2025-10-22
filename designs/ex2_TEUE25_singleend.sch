@@ -1,8 +1,9 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.3}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 P 4 1 -80 -1490 {}
 N 240 -1220 240 -1180 {lab=BIAS}
@@ -415,7 +416,6 @@ C {lab_wire.sym} 490 -1560 0 0 {name=p7 sig_type=std_logic lab=OUTA
 C {lab_wire.sym} 490 -1480 0 0 {name=p8 sig_type=std_logic lab=OUTint
 }
 C {lab_wire.sym} 730 -1660 0 0 {name=p9 sig_type=std_logic lab=BIAS}
-C {lab_wire.sym} 420 -1250 0 0 {name=p10 sig_type=std_logic lab=BIAS}
 C {lab_wire.sym} 410 -1310 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 820 -1720 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {gnd.sym} 790 -1370 0 0 {name=l1 lab=GND}
@@ -429,3 +429,8 @@ C {gnd.sym} 90 -1510 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} 50 -1620 0 0 {name=p14 sig_type=std_logic lab=IN2
 }
 C {lab_wire.sym} 260 -1620 0 0 {name=p15 sig_type=std_logic lab=IN1}
+C {code_shown.sym} 160 -830 0 0 {name=spice only_toplevel=false value="
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+"
+}
