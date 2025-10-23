@@ -5,6 +5,7 @@ syntax on
 set scrolloff=5
 set number
 set tabstop=2 shiftwidth=2 expandtab
+set ff=unix
 
 set guifont=Monospace\ Regular\ 16
 set background=dark

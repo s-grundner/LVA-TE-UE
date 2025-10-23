@@ -288,7 +288,8 @@ set terminal { \
 ###########################################################################
 #### EDITOR
 ###########################################################################
-set editor {gvim -f -u /foss/designs/.vimrc}
+set editor {gvim -f}
+#set editor {xterm -e vim -u /foss/designs/.vimrc}
 
 ###########################################################################
 #### SHOW ERC INFO WINDOW (erc errors, warnings etc)

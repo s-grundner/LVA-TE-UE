@@ -25,6 +25,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 
 \documentclass[a4paper,oneside,10pt,ngerman]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[
@@ -88,8 +89,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 
-%% Add your report sections ...
-%% 
 
 \section{Inverter Verstärker}
 
@@ -115,7 +114,7 @@ Bei der PMOST/R Verstärkerschaltung wird der Arbeitspunktes bei maximaler Spann
 \[ A_0 = \frac{U_\mathrm{out}}{U_\mathrm{in}} \]
 mittels DC sweep von \lstinline|VIN| ermittelt.
 
-\lstinputlisting[firstline=75, lastline=78]{\designspath/a1_k12136610.sch}
+\lstinputlisting[firstline=81, lastline=84]{\designspath/a1_k12136610.sch}
 
 In \autoref{fig:Uout-vs-Uin} ist das Inverter Verhalten der Schaltung zu erkennen und in \autoref{fig:A0-vs-Uin} der Verlauf der Spannungsverstärkung.
 
@@ -134,17 +133,36 @@ In \autoref{fig:Uout-vs-Uin} ist das Inverter Verhalten der Schaltung zu erkenne
 
 Nun werden die Spannungen bei der Maximalverstärkung gesucht, diese Spannungen definieren den Arbeitspunkt.
 
-\lstinputlisting[firstline=79, lastline=81]{\designspath/a1_k12136610.sch}
+\lstinputlisting[firstline=90, lastline=92]{\designspath/a1_k12136610.sch}
 
 Die Werte im Arbeitspunkt sind:
 
 \begin{table}[h]
     \caption{Arbeitspunkt}
     \begin{tabularx}{\textwidth}{XXX}
-    $A_{0, \max}$ & $U_\mathrm{GD, op}$ (Eingangsspannung) & $U_\mathrm{DS, op}$ (Biasspannung) \\ \midrule
-    $3.07$ & $\SI{-0.782}{\volt}$ & $\SI{-1.05}{\volt}$ 
+    $A_{0, \max}$ & $U_\mathrm{GS, op}$ (Eingangsspannung) & $U_\mathrm{DS, op}$ (Biasspannung) \\ \midrule
+    $3.07$ & $\SI{-1.02}{\volt}$ & $\SI{-0.75}{\volt}$ 
     \end{tabularx}
 \end{table}
+
+\newpage
+\subsection{Transkonduktanz und Ausgangsleitwert}
+
+Die Transkonduktanz $g_m$ und der Ausgangsleitwert $g_{ds}$ werden mittels AC
+Analyse im Arbeitspunkt bestimmt.
+
+\[ g_m = \frac{\partial I_D}{\partial U_{GS}}, \quad g_{ds} = \frac{\partial I_D}{\partial U_{GS}} \]
+
+Mit den Direktiven:
+
+
+\begin{minipage}[t]{0.44\textwidth}
+    \lstinputlisting[firstline=103, lastline=107]{\designspath/a1_k12136610.sch}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.44\textwidth}
+    \lstinputlisting[firstline=97, lastline=101]{\designspath/a1_k12136610.sch}
+\end{minipage}
+
 
 \begin{figure}[h]
     \begin{minipage}[t]{0.49\textwidth}
@@ -157,6 +175,41 @@ Die Werte im Arbeitspunkt sind:
         \includegraphics[width=\textwidth]{gds.png}
         \caption{gds}\label{fig:gds-vs-Uin}
     \end{minipage}
+\end{figure}
+
+Aus diesen Werten und dem Lastwiderstand lässt sich auch die Spannungsverstärkung berechen:
+
+\[
+A_{0, \max} = -g_m \cdot R_L \parallel r_{ds} = -g_m \cdot \left( R_L \parallel \frac{1}{g_{ds}} \right)
+\]
+
+\lstinputlisting[firstline=109, lastline=110]{\designspath/a1_k12136610.sch}
+
+\begin{table}[h]
+    \caption{Ergebnisse für die Leitwerte im Arbeitspunkt}
+    \begin{tabularx}{\textwidth}{XXX}
+    $A_{0, \max, \mathrm{calc}}$ & $g_m$ (Transkonduktanz) & $g_{ds}$ (Ausgangsleitwert) \\ \midrule
+    $3.07$ & $\SI{10.4}{\milli\siemens}$ & $\SI{13.91087}{\micro\siemens}$ 
+    \end{tabularx}
+\end{table}
+
+\newpage
+\subsection{Transientenverhalten}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tran.png}
+\end{figure}
+
+\subsection{AC-Analyse}
+
+Hier ist zu sehen, dass das Invertierende Verhalten des Verstärkers erst im GHz Bereich abnimmt.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{ac-out.png}
+    \includegraphics[width=.6\textwidth]{ac-phase.png}
+    \caption{Phasengang vs Frequenz}\label{fig:ac}
 \end{figure}
 
 %% 
