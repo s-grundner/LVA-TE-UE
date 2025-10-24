@@ -174,9 +174,9 @@ set xfont_size=20
 *** AC Analysis ***
 **************************
 
-alter @VIN[ac]=-0.78
-ac dec 100 1 10G
-plot -v(out)
+alter @VIN[ac]=-1.8
+ac dec 100 1 100G
+plot -v(out)/v(in)
 plot phase(-v(out)/v(in))
 
 .endc
