@@ -93,55 +93,54 @@ N 790 -1660 840 -1660 {lab=VDD}
 N 730 -1560 890 -1560 {lab=VDD}
 N 840 -1660 840 -1560 {lab=VDD}
 N 840 -1720 840 -1660 {lab=VDD}
-N 630 -1560 690 -1560 {lab=#net6}
-N 930 -1560 980 -1560 {lab=#net7}
+N 630 -1560 690 -1560 {lab=outcm}
 N 730 -1530 730 -1460 {lab=BIAS2}
-N 890 -1530 890 -1460 {lab=#net8}
+N 890 -1530 890 -1460 {lab=#net6}
 N 890 -1400 890 -1370 {lab=GND}
 N 890 -1430 980 -1430 {lab=GND}
 N 730 -1400 730 -1370 {lab=GND}
-N 580 -1560 630 -1560 {lab=#net6}
-N 580 -1480 620 -1480 {lab=#net6}
-N 620 -1560 620 -1480 {lab=#net6}
+N 580 -1560 630 -1560 {lab=outcm}
+N 580 -1480 620 -1480 {lab=outcm}
+N 620 -1560 620 -1480 {lab=outcm}
 N 440 -1560 520 -1560 {lab=OUTA}
 N 440 -1480 520 -1480 {lab=OUTint}
 N 690 -1660 750 -1660 {lab=BIAS}
 N 790 -1720 840 -1720 {lab=VDD}
-N 840 -1730 840 -1720 {lab=VDD}
 N 730 -1370 890 -1370 {lab=GND}
 N 640 -1430 730 -1430 {lab=GND}
 N 640 -1430 640 -1370 {lab=GND}
 N 640 -1370 730 -1370 {lab=GND}
 N 890 -1370 980 -1370 {lab=GND}
 N 980 -1430 980 -1370 {lab=GND}
-N 850 -1480 850 -1430 {lab=#net8}
-N 850 -1480 890 -1480 {lab=#net8}
+N 850 -1480 850 -1430 {lab=#net6}
+N 850 -1480 890 -1480 {lab=#net6}
 N 770 -1480 770 -1430 {lab=BIAS2}
 N 730 -1480 770 -1480 {lab=BIAS2}
 N 1040 -1500 1040 -1370 {lab=GND}
 N 980 -1370 1040 -1370 {lab=GND}
-N 970 -1560 1040 -1560 {lab=#net7}
 N 150 -1380 150 -1350 {lab=GND}
-N 150 -1460 150 -1440 {lab=#net9}
-N 80 -1460 150 -1460 {lab=#net9}
-N 150 -1460 220 -1460 {lab=#net9}
+N 150 -1460 150 -1440 {lab=cm}
+N 80 -1460 150 -1460 {lab=cm}
+N 150 -1460 220 -1460 {lab=cm}
 N 220 -1530 220 -1510 {lab=GND}
 N 150 -1510 220 -1510 {lab=GND}
 N 90 -1510 150 -1510 {lab=GND}
 N 90 -1530 90 -1510 {lab=GND}
-N 50 -1520 50 -1460 {lab=#net9}
-N 50 -1460 80 -1460 {lab=#net9}
-N 260 -1520 260 -1460 {lab=#net9}
-N 210 -1460 260 -1460 {lab=#net9}
-N 90 -1570 150 -1570 {lab=#net10}
-N 150 -1570 220 -1570 {lab=#net10}
+N 50 -1520 50 -1460 {lab=cm}
+N 50 -1460 80 -1460 {lab=cm}
+N 260 -1520 260 -1460 {lab=cm}
+N 210 -1460 260 -1460 {lab=cm}
+N 90 -1570 150 -1570 {lab=in}
+N 150 -1570 220 -1570 {lab=in}
 N 50 -1640 50 -1580 {lab=IN2}
 N 260 -1640 260 -1580 {lab=IN1}
 N 950 -1200 1020 -1200 {lab=OUTint}
 N 950 -1240 950 -1200 {lab=OUTint}
 N 780 -1200 950 -1200 {lab=OUTint}
 N 780 -1240 780 -1200 {lab=OUTint}
-C {vsource.sym} 150 -1410 0 0 {name=VINCM value=0.9 savecurrent=false}
+N 930 -1560 1040 -1560 {lab=#net7}
+C {vsource.sym} 150 -1410 0 0 {name=VINCM value="0.9 ac 0.9" savecurrent=false
+}
 C {sky130_fd_pr/nfet_01v8.sym} 220 -1050 0 0 {name=MB1N
 W=10
 L=0.15
@@ -415,22 +414,61 @@ C {lab_wire.sym} 490 -1560 0 0 {name=p7 sig_type=std_logic lab=OUTA
 }
 C {lab_wire.sym} 490 -1480 0 0 {name=p8 sig_type=std_logic lab=OUTint
 }
-C {lab_wire.sym} 730 -1660 0 0 {name=p9 sig_type=std_logic lab=BIAS}
+C {lab_wire.sym} 690 -1660 0 0 {name=p9 sig_type=std_logic lab=BIAS}
 C {lab_wire.sym} 410 -1310 0 0 {name=p11 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 820 -1720 0 0 {name=p12 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 790 -1720 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {gnd.sym} 790 -1370 0 0 {name=l1 lab=GND}
 C {lab_wire.sym} 770 -1480 0 0 {name=p13 sig_type=std_logic lab=BIAS2}
 C {vsource.sym} 1040 -1530 0 0 {name=VOUTCM value=0.9 savecurrent=false}
 C {gnd.sym} 150 -1350 0 0 {name=l3 lab=GND}
-C {vsource.sym} 150 -1540 0 0 {name=VID value=0 savecurrent=false}
+C {vsource.sym} 150 -1540 0 0 {name=VID value="0 ac 0.01" savecurrent=false
+}
 C {vcvs.sym} 260 -1550 0 0 {name=E1 value=-0.5}
 C {vcvs.sym} 50 -1550 0 1 {name=E2 value=0.5}
 C {gnd.sym} 90 -1510 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} 50 -1620 0 0 {name=p14 sig_type=std_logic lab=IN2
 }
 C {lab_wire.sym} 260 -1620 0 0 {name=p15 sig_type=std_logic lab=IN1}
-C {code_shown.sym} 160 -830 0 0 {name=spice only_toplevel=false value="
+C {code_shown.sym} 1135 -1725 0 0 {name=spice only_toplevel=false value="
 .lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
+.control
+
+set xbrushwidth=7
+set xgridwidth=2
+set xfont_size=20
+
+*****************
+*** VIN Sweep ***
+*****************
+
+alter @VINCM[dc]=0.9
+dc VID -0.2 0 1m
+let A0 = deriv(-OUTA)
+let Agl = outcm/cm
+let cmrr = 20*log10(A0/Agl)
+plot A0 Agl
+plot outcm cm
+plot OUTA in
+plot cmrr
+
+*******************
+*** AC Analysis ***
+*******************
+
+ac dec 100 10 100Meg
+let A0 = deriv(-OUTA)
+let Agl = outcm/cm
+let cmrr = 20*log10(A0/Agl)
+plot A0 Agl
+plot outcm cm
+plot OUTA in
+plot cmrr
+
+.endc
+.save all
 "
 }
+C {lab_wire.sym} 180 -1570 0 0 {name=p10 sig_type=std_logic lab=in}
+C {lab_wire.sym} 190 -1460 0 0 {name=p16 sig_type=std_logic lab=cm}
+C {lab_wire.sym} 670 -1560 0 0 {name=p17 sig_type=std_logic lab=outcm}

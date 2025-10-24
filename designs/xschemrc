@@ -53,7 +53,7 @@ set dircolor(devices$) red
 ###########################################################################
 #### WINDOW TO OPEN ON STARTUP: XSCHEM_START_WINDOW
 ###########################################################################
-set XSCHEM_START_WINDOW {Aufgabe1_k12136610.sch}
+set XSCHEM_START_WINDOW {Aufgabe2_k12136610.sch}
 
 ###########################################################################
 #### DIRECTORY WHERE SIMULATIONS, NETLIST AND SIMULATOR OUTPUTS ARE PLACED
