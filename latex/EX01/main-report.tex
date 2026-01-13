@@ -41,14 +41,18 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 
+%% This is the place where you can load additional packages. If you want to load
+%% a package `biblatex', you would use the command `\usepackage{biblatex}'.
+%% 
 \usepackage{enumerate}
 \usepackage{listingsutf8}
 \usepackage{graphicx}
 \usepackage{siunitx}
+
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\designspath}{../../designs}
+\newcommand{\designs}{../../designs}
 \graphicspath{{images/}}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
@@ -114,7 +118,17 @@ Bei der PMOST/R Verstärkerschaltung wird der Arbeitspunktes bei maximaler Spann
 \[ A_0 = \frac{U_\mathrm{out}}{U_\mathrm{in}} \]
 mittels DC sweep von \lstinline|VIN| ermittelt.
 
-\lstinputlisting[firstline=81, lastline=84]{\designspath/Aufgabe1_k12136610.sch}
+<<<<<<< Updated upstream
+\lstinputlisting[firstline=75, lastline=78]{\designspath/a1_k12136610.sch}
+=======
+\lstinputlisting[firstline=77, lastline=81]{\designs/a1_k12136610.sch}
+
+Nun werden die Spannungen bei der Maximalverstärkung gesucht und die Spannungsquellen im SKY Modell (\autoref{fig:xschem}) auf diesen Arbeitspunkt eingestellt.
+
+\lstinputlisting[firstline=82, lastline=83]{\designs/a1_k12136610.sch}
+
+\subsubsection{Ergebnisse}
+>>>>>>> Stashed changes
 
 In \autoref{fig:Uout-vs-Uin} ist das Inverter Verhalten der Schaltung zu erkennen und in \autoref{fig:A0-vs-Uin} der Verlauf der Spannungsverstärkung.
 

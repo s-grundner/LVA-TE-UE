@@ -1,9 +1,8 @@
-v {xschem version=3.4.8RC file_version=1.3}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
-F {}
 E {}
 P 4 1 -80 -1490 {}
 N 240 -1220 240 -1180 {lab=BIAS}
@@ -413,7 +412,8 @@ C {lab_wire.sym} 490 -1560 0 0 {name=p7 sig_type=std_logic lab=OUTA
 }
 C {lab_wire.sym} 490 -1480 0 0 {name=p8 sig_type=std_logic lab=OUTint
 }
-C {lab_wire.sym} 690 -1660 0 0 {name=p9 sig_type=std_logic lab=BIAS}
+C {lab_wire.sym} 730 -1660 0 0 {name=p9 sig_type=std_logic lab=BIAS}
+C {lab_wire.sym} 420 -1250 0 0 {name=p10 sig_type=std_logic lab=BIAS}
 C {lab_wire.sym} 410 -1310 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 790 -1720 0 0 {name=p12 sig_type=std_logic lab=VDD}
 C {gnd.sym} 790 -1370 0 0 {name=l1 lab=GND}
@@ -422,60 +422,4 @@ C {vsource.sym} 1040 -1530 0 0 {name=VOUTCM value=0.9 savecurrent=false}
 C {gnd.sym} 220 -1360 0 0 {name=l3 lab=GND}
 C {vsource.sym} 220 -1550 0 0 {name=VID value="0 ac -0.01" savecurrent=false
 }
-C {vcvs.sym} 330 -1560 0 0 {name=E1 value=-0.5}
-C {vcvs.sym} 120 -1560 0 1 {name=E2 value=0.5}
-C {gnd.sym} 160 -1520 0 0 {name=l4 lab=GND}
-C {lab_wire.sym} 120 -1630 0 0 {name=p14 sig_type=std_logic lab=IN2
-}
-C {lab_wire.sym} 330 -1630 0 0 {name=p15 sig_type=std_logic lab=IN1}
-C {code_shown.sym} 1135 -1725 0 0 {name=spice only_toplevel=false value="
-.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-
-.control
-
-set xbrushwidth=7
-set xgridwidth=2
-set xfont_size=20
-
-*****************
-*** VIN Sweep ***
-*****************
-
-dc VID 0 -0.2 -1m
-let A0 = deriv(-OUTA)
-let Agl = outcm/cm
-let cmrr = 20*log10(A0/Agl)
-
-plot outcm cm
-plot BIAS
-plot OUTA in
-plot A0 Agl
-plot cmrr
-
-meas DC A0max max A0
-meas DC Aglmax max Agl
-print outcm[0]
-
-*******************
-*** AC Analysis ***
-*******************
-
-ac dec 100 10 10Meg
-let A0 = -OUTA/in
-let Agl = outcm/cm
-
-plot outcm cm
-plot OUTA in
-plot A0
-plot Agl
-
-let cmrr = A0/Agl
-plot cmrr
-
-.endc
-.save all
-"
-}
-C {lab_wire.sym} 250 -1580 0 0 {name=p10 sig_type=std_logic lab=in}
-C {lab_wire.sym} 260 -1470 0 0 {name=p16 sig_type=std_logic lab=cm}
-C {lab_wire.sym} 670 -1560 0 0 {name=p17 sig_type=std_logic lab=outcm}
+C {lab_wire.sym} 260 -1620 0 0 {name=p15 sig_type=std_logic lab=IN1}
